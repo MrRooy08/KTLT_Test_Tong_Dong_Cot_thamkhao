@@ -35,10 +35,10 @@ void Tong_cot(MATRAN a)
 {
 	for (int i = 0; i < a.m; i++)
 	{
-		int s = 0;
+		int s = 0; //sau mỗi vòng lặp thì biến sẽ bị reset, nếu khai báo bên ngoài 2 vòng lặp thì sẽ gây hiện tượng chồng tổng, cho nên để vòng giữa sau mỗi vòng lặp nó sẽ reset lại biến
 		for (int j = 0; j < a.n; j++)
 		{
-			s += a.list[j][i];
+			s += a.list[j][i]; // chỉ số dòng đi trước rồi tới cột cho nên [j][i]
 		}
 		cout << "\n Cot thu " << i << "co tong la: " << s;
 	}
@@ -48,7 +48,7 @@ void Tong_dong(MATRAN a)
 {
 	for (int i = 0; i < a.n; i++) {
 		int s = 0; //sau mỗi vòng lặp thì biến sẽ bị reset, nếu khai báo bên ngoài 2 vòng lặp thì sẽ gây hiện tượng chồng tổng, cho nên để vòng giữa sau mỗi vòng lặp nó sẽ reset lại biến 
-		for (int j = 0; j < a.m; j++)
+		for (int j = 0; j < a.m; j++) 
 		{
 			s += a.list[i][j];
 		}
