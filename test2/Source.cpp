@@ -47,7 +47,7 @@ void Tong_cot(MATRAN a)
 void Tong_dong(MATRAN a)
 {
 	for (int i = 0; i < a.n; i++) {
-		int s = 0; //khai báo ở đây bởi vì có 2 vòng lặp, 1 là cho dòng, 1 là cho cột. Nếu khai báo ở ngoài thì sẽ bị kh chuẩn kqua
+		int s = 0; //sau mỗi vòng lặp thì biến sẽ bị reset, nếu khai báo bên ngoài 2 vòng lặp thì sẽ gây hiện tượng chồng tổng, cho nên để vòng giữa sau mỗi vòng lặp nó sẽ reset lại biến 
 		for (int j = 0; j < a.m; j++)
 		{
 			s += a.list[i][j];
